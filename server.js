@@ -12,6 +12,7 @@ app.use(express.json());
 
 app.use("/comments", require("./routes/comments"));
 app.use("/users", require("./routes/users"));
+app.use("/comment-likes", require("./routes/comment-likes"));
 
 // global error handler middleware
 app.use((err, req, res, next) => {
