@@ -11,6 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use("/comments", require("./routes/comments"));
+app.use("/users", require("./routes/users"));
 
 // global error handler middleware
 app.use((err, req, res, next) => {
