@@ -10,6 +10,8 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+app.use("/comments", require("./routes/comments"));
+
 // global error handler middleware
 app.use((err, req, res, next) => {
   console.error(err.stack);
