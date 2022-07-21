@@ -2,7 +2,7 @@
   "name": "comment-ui-backend",
   "version": "1.0.0",
   "description": "Mysql backend for comments ui app",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js"
