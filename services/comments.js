@@ -36,17 +36,14 @@ const deleteComment = async (req, res) => {
   // delete comment
 };
 
-const getCommentById = async (req, res) => {
+const getCommentById = async (id) => {
   try {
-    const id = req.params?.id;
     const comment = await Comment.where({ id }).fetch({
       withRelated: ["author", "likes"],
     });
-    res.send(comment);
     return comment;
   } catch (err) {
     console.error(err);
-    res.status(500).send(messages.serverError);
   }
 };
 

@@ -1,6 +1,8 @@
 require("dotenv").config();
+const http = require("http");
 const express = require("express");
 const cors = require("cors");
+const socketServer = require("./socketServer");
 
 const PORT = process.env.PORT || 5000;
 
@@ -23,6 +25,9 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.listen(PORT, () => {
+const server = http.createServer(app);
+socketServer.registerSocketServer(server);
+
+server.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
 });
