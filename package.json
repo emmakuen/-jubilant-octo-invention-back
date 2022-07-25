@@ -1,6 +1,9 @@
 {
   "name": "comment-ui-backend",
   "version": "1.0.0",
+  "engines": {
+    "node": "16.x"
+  },
   "description": "Mysql backend for comments ui app",
   "main": "server.js",
   "scripts": {
